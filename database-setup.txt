@@ -1,0 +1,13 @@
+Execute the below commands to create SQL tables and load default data.
+
+$ SQLite3 hospital.db
+
+
+> CREATE TABLE doctors(  id INTEGER PRIMARY KEY   AUTOINCREMENT,   name character varying(100) not null);
+> CREATE TABLE patients(   id INTEGER PRIMARY KEY   AUTOINCREMENT,   name character varying(100) not null,   doctors_id INTEGER references doctors(id));
+> INSERT INTO "doctors" ( "id","name" ) VALUES ( '1','John' );
+> INSERT INTO "doctors" ( "id","name" ) VALUES ( '2','Greg' );
+> INSERT INTO "doctors" ( "id","name" ) VALUES ( '3','Emily' );
+> INSERT INTO "doctors" ( "id","name" ) VALUES ( '4','Lee' );
+> INSERT INTO "doctors" ( "id","name" ) VALUES ( '5','Melody' );
+> INSERT INTO "doctors" ( "id","name" ) VALUES ( '6','Bertha' );
